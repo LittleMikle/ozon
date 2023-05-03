@@ -1,5 +1,5 @@
 # Сокращение ссылок
-Сервис написан на фремворке fiber, запись в базу PostgreSQL осуществлялась через GORM. В качестве in-memory хранилища используется map. Токен короткой ссылки генерируются библиотекой go-nanoid
+Сервис написан на фреймворке fiber, запись в базу PostgreSQL осуществлялась через GORM. В качестве in-memory хранилища используется map. Токен короткой ссылки генерируется библиотекой go-nanoid
 
 
 ## **Запуск in-memory или в БД Postgres зависит от значения поля DB_PG в .env файле**
@@ -23,7 +23,10 @@
 После запуска сервиса в Postgres видим успешные логи о создании конфига из .env файла, успешное подключение к БД
 ![Screenshot from 2023-05-02 14-30-48](https://user-images.githubusercontent.com/101155101/235654542-2a942fe8-71b5-4ea9-b72a-817b5d334bad.png)
 
-**В Postman выставляем метод POST, ссылка на апи localhost:8080/api/create**
+**В Postman выставляем метод POST, ссылка на апи:**
+
+`localhost:8080/api/create`
+
 Тело запроса - полный URL. 
 
 ![Screenshot from 2023-05-03 01-31-21](https://user-images.githubusercontent.com/101155101/235799639-69bf5638-766d-46ed-bd3b-4816bc624b4f.png)
@@ -52,7 +55,9 @@
 
 
 **В Postman выставляем метод GET, ссылка на апи:**
+
 `localhost:8080/api/find/` + `полученный токен из базы`
+
 Подставляем нашу короткую ссылку, полученную ранее
 
 ![Screenshot from 2023-05-03 01-42-23](https://user-images.githubusercontent.com/101155101/235801106-ea49ba5b-df2c-414c-95a2-64be47808672.png)
@@ -73,7 +78,10 @@
 
 ![Screenshot from 2023-05-02 14-48-10](https://user-images.githubusercontent.com/101155101/235657885-ce65c82d-164e-48e9-acef-ff47a1da0f99.png)
 
-**В Postman выставляем метод POST, ссылка на апи localhost:8080/api/create**
+**В Postman выставляем метод POST, ссылка на апи:**
+
+`localhost:8080/api/create`
+
 Тело запроса - полный URL. 
 
 
@@ -101,7 +109,9 @@
 
 
 **В Postman выставляем метод GET, ссылка на апи:**
+
 `localhost:8080/api/find/` + `полученный токен из базы`
+
 Подставляем нашу короткую ссылку, полученную ранее
 
 ![Screenshot from 2023-05-03 01-58-52](https://user-images.githubusercontent.com/101155101/235803163-218d8ae9-a02f-4cba-ab64-2210f41e622b.png)
